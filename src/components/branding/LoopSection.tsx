@@ -33,7 +33,7 @@ export function LoopSection() {
   const activeGlow = steps[activeStep].glow;
 
   return (
-    <section ref={containerRef} className="relative h-[300vh] bg-background">
+    <section id="loop" ref={containerRef} className="relative h-[300vh] bg-background">
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
         
         {/* Ambient Background Glow — shifts color with active step */}
