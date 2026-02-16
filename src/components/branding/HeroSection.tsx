@@ -42,7 +42,7 @@ export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
                </Link>
              </Button>
              <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-lg border-white/20 hover:bg-white/10 hover:text-white backdrop-blur-sm">
-               <Link href="/#curriculum">
+               <Link href="/#bootcamp">
                  View Curriculum <PlayCircle className="ml-2 w-5 h-5" />
                </Link>
              </Button>

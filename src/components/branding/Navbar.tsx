@@ -13,11 +13,11 @@ export function Navbar() {
   const pathname = usePathname();
   
   const navLinks = [
-    { to: '/bootcamp', label: 'Bootcamp' },
-    { to: '/platform', label: 'Platform' },
-    { to: '/membership', label: 'Membership' },
-    { to: '/about', label: 'About' },
-    { to: '/faq', label: 'FAQ' },
+    { to: '/#bootcamp', label: 'Bootcamp' },
+    { to: '/#platform', label: 'Platform' },
+    { to: '/#membership', label: 'Membership' },
+    { to: '/#about', label: 'About' },
+    { to: '/#faq', label: 'FAQ' },
   ];
   
   const isActive = (path: string) => pathname === path;

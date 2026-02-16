@@ -59,7 +59,7 @@ export function FeatureShowcase() {
               </ul>
 
               <div className="mt-auto pt-8 border-t border-border/10">
-                <Link href="/academy" className="text-orange-600 dark:text-orange-400 font-bold hover:underline flex items-center gap-2 group-hover:gap-3 transition-all">
+                <Link href="/#bootcamp" className="text-orange-600 dark:text-orange-400 font-bold hover:underline flex items-center gap-2 group-hover:gap-3 transition-all">
                   Example Curriculum
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -112,7 +112,7 @@ export function FeatureShowcase() {
               </ul>
 
               <div className="mt-auto pt-8 border-t border-border/10">
-                <Link href="/platform" className="text-icy-cyan-600 dark:text-icy-cyan-400 font-bold hover:underline flex items-center gap-2 group-hover:gap-3 transition-all">
+                <Link href="/#platform" className="text-icy-cyan-600 dark:text-icy-cyan-400 font-bold hover:underline flex items-center gap-2 group-hover:gap-3 transition-all">
                   Explore Features
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
