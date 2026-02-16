@@ -39,11 +39,8 @@ export function ChapterNavigation() {
 
   return (
     <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-center">
-      {/* Dots container */}
-      <div className="flex flex-col items-center gap-4 relative py-2">
-        {/* Vertical line through dots */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1.5px] bg-zinc-300/60 dark:bg-zinc-700/60" />
-
+      {/* Dots only — no line through them */}
+      <div className="flex flex-col items-center gap-[18px]">
         {chapters.map((chapter) => (
           <a
             key={chapter.id}
@@ -54,7 +51,7 @@ export function ChapterNavigation() {
               document.getElementById(chapter.id)?.scrollIntoView({ behavior: 'smooth' });
             }}
           >
-            {/* Label (Absolute Left) */}
+            {/* Label (appears left on hover / active) */}
             <span className={`absolute right-8 whitespace-nowrap text-xs font-medium transition-all duration-300 origin-right ${
               activeSection === chapter.id 
                 ? 'opacity-100 translate-x-0 text-cyan-500 scale-100' 
@@ -64,25 +61,17 @@ export function ChapterNavigation() {
             </span>
             
             {/* Dot */}
-            <div className="relative z-10 flex items-center justify-center w-5 h-5">
-               {/* Background mask */}
-               <div className={`absolute rounded-full bg-background transition-all duration-300 ${
-                 activeSection === chapter.id ? 'w-5 h-5' : 'w-3 h-3'
-               }`} />
-
-               {/* The Visible Dot */}
-              <div className={`rounded-full transition-all duration-300 relative z-20 ${
-                activeSection === chapter.id 
-                  ? 'w-3.5 h-3.5 bg-cyan-500 shadow-[0_0_12px_rgba(6,182,212,0.7)]' 
-                  : 'w-[6px] h-[6px] bg-zinc-400 dark:bg-zinc-500 group-hover:bg-cyan-400/60'
-              }`} />
-            </div>
+            <div className={`rounded-full transition-all duration-300 ${
+              activeSection === chapter.id 
+                ? 'w-[14px] h-[14px] bg-[#22d3ee] shadow-[0_0_10px_rgba(34,211,238,0.6)]' 
+                : 'w-[6px] h-[6px] bg-[#d1d5db] dark:bg-[#6b7280] group-hover:bg-[#67e8f9] dark:group-hover:bg-[#67e8f9]'
+            }`} />
           </a>
         ))}
       </div>
 
-      {/* Vertical tail line extending toward footer */}
-      <div className="w-[1.5px] h-[30vh] bg-gradient-to-b from-zinc-300/60 dark:from-zinc-700/60 to-transparent" />
+      {/* Tail line — starts only after the last circle */}
+      <div className="w-[1.5px] h-[28vh] mt-4 bg-gradient-to-b from-[#d1d5db] dark:from-[#4b5563] to-transparent" />
     </div>
   );
 }
