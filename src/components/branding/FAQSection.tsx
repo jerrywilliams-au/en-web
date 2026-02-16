@@ -12,7 +12,7 @@ export function FAQSection() {
     },
     {
       q: "Can I get a refund?",
-      a: "Yes. If you decide the program isn't for you within the first week (Vertical Slice #1), we offer a full refund. No questions asked."
+      a: "Yes. If you decide the program isn't for you within the first week (Spiral Iteration #1), we offer a full refund. No questions asked."
     },
     {
       q: "Do I own my IP?",

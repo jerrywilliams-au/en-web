@@ -53,7 +53,7 @@ export function AboutSection() {
             </p>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My mission is to equip neurodivergent and solo founders with the <strong>exact</strong> vertical slices, mental models, and production-ready code they need to ship world-class software without the burnout.
+              My mission is to equip neurodivergent and solo founders with the <strong>exact</strong> iterative spiral loops, mental models, and production-ready code they need to ship world-class software without the burnout.
             </p>
 
             <div className="grid grid-cols-2 gap-6 pt-6">

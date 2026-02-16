@@ -11,8 +11,8 @@ export function PillarsSection() {
       desc: 'Bridging the gap between reality and possibility. AI-driven ideation & strategic roadmapping.',
       image: '/images/branding/pillar_ideator.png',
       color: 'text-cyan-400',
-      border: 'group-hover:border-cyan-500/50',
-      shadow: 'group-hover:shadow-cyan-500/20',
+      border: 'hover:border-cyan-400/60',
+      glowColor: '0 188 212',
       bar: 'bg-cyan-500'
     },
     {
@@ -21,8 +21,8 @@ export function PillarsSection() {
       desc: 'Sustainable business models. ROI, scalability, and market fit. Turning tech into value.',
       image: '/images/branding/pillar_entrepreneur.png',
       color: 'text-emerald-400',
-      border: 'group-hover:border-emerald-500/50',
-      shadow: 'group-hover:shadow-emerald-500/20',
+      border: 'hover:border-emerald-400/60',
+      glowColor: '52 211 153',
       bar: 'bg-emerald-500'
     },
     {
@@ -31,8 +31,8 @@ export function PillarsSection() {
       desc: 'Technical excellence. Distributed systems, cloud infra, and optimizing inference pipelines.',
       image: '/images/branding/pillar_architect.png',
       color: 'text-indigo-400',
-      border: 'group-hover:border-indigo-500/50',
-      shadow: 'group-hover:shadow-indigo-500/20',
+      border: 'hover:border-indigo-400/60',
+      glowColor: '129 140 248',
       bar: 'bg-indigo-500'
     }
   ];
@@ -68,24 +68,31 @@ export function PillarsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className={`group relative p-8 rounded-2xl glass-1 glass-hover ${pillar.border} transition-all duration-300 hover:shadow-2xl ${pillar.shadow} overflow-hidden`}
+              className={`pillar-card group relative rounded-2xl border border-white/15 bg-card/50 backdrop-blur-sm transition-all duration-500 overflow-hidden ${pillar.border}`}
+              style={{ '--glow': pillar.glowColor } as React.CSSProperties}
             >
-              {/* Cinematic Header Image */}
-              <div className="absolute top-0 left-0 right-0 h-48 w-full opacity-60 group-hover:opacity-100 transition-opacity duration-500">
+              {/* Image Section — in normal flow, not overlapping */}
+              <div className="relative h-52 w-full overflow-hidden opacity-90 group-hover:opacity-100 transition-all duration-500">
                  <Image 
                    src={pillar.image} 
                    alt={`${pillar.title} Abstract`} 
                    fill
-                   className="object-cover object-top"
+                   className="object-cover object-center brightness-[1.25] contrast-[1.1] group-hover:brightness-[1.5] group-hover:scale-105 transition-all duration-700"
                  />
-                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background" />
+                 {/* Colored glow on hover */}
+                 <div className={`absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500 bg-gradient-to-b ${
+                   pillar.title === 'Ideator' ? 'from-cyan-500/40 via-cyan-500/10' :
+                   pillar.title === 'Entrepreneur' ? 'from-emerald-500/40 via-emerald-500/10' :
+                   'from-indigo-500/40 via-indigo-500/10'
+                 } to-transparent`} />
               </div>
               
-              <div className="relative z-10 mt-32">
-                <h3 className="text-3xl font-bold mb-2 flex items-center gap-3">
-                  <span className={`${pillar.color} drop-shadow-md`}>{pillar.title}</span>
+              {/* Text Section — below the image */}
+              <div className="p-8">
+                <h3 className="text-3xl font-bold mb-2">
+                  <span className={`${pillar.color} drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`}>{pillar.title}</span>
                 </h3>
-                <div className={`h-1 w-12 ${pillar.bar} mb-6 rounded-full`} />
+                <div className={`h-1 w-12 ${pillar.bar} mb-4 rounded-full shadow-[0_0_8px_currentColor]`} />
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {pillar.desc}
                 </p>
