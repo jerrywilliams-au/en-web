@@ -55,7 +55,7 @@ module.exports = {
           DEFAULT: "var(--card)",
           foreground: "var(--card-foreground)",
         },
-        // Figma Specific
+        // Surface Tokens
         surface: {
           1: "var(--surface-1)",
           2: "var(--surface-2)",

@@ -31,7 +31,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo - CSS Based Monogram as per Figma */}
+          {/* Logo - CSS Based Monogram */}
           <Link href="/" className="flex items-center gap-3 group">
             <ThemeAwareLogo />
             <span className="hidden sm:block" 

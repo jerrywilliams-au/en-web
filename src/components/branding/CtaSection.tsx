@@ -49,9 +49,7 @@ export function CtaSection() {
             className="flex flex-col sm:flex-row items-center justify-center gap-6"
           >
             <a 
-              href="https://motion-hire-08777164.figma.site/apply" 
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/apply"
               className="w-full sm:w-auto px-10 py-5 rounded-full bg-gradient-to-r from-cyan-500 to-emerald-500 text-white font-bold text-xl shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-[1.05] transition-all duration-300"
             >
               Apply to Cohort
