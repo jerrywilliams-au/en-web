@@ -28,7 +28,7 @@ export function LegalFooter() {
               <ThemeAwareLogo />
               <div className="flex flex-col">
                 <span className="font-bold text-foreground text-lg tracking-tight">Jerry Williams</span>
-                <span className="text-xs text-muted-foreground tracking-wide font-medium">SOLO NEUROSYMBIOTIC OS</span>
+                <span className="text-xs text-muted-foreground tracking-wide font-medium">Ideator | Entrepreneur | Architect</span>
               </div>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">

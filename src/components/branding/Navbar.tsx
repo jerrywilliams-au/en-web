@@ -6,6 +6,7 @@ import { Moon, Sun } from 'lucide-react';
 import { useTheme } from '@/providers/ThemeProvider';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
+import { ThemeAwareLogo } from './ThemeAwareLogo';
 
 export function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -32,10 +33,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo - CSS Based Monogram as per Figma */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-lg gradient-accent flex items-center justify-center text-white glow-cyan transition-all duration-200 group-hover:scale-105"
-                 style={{ fontWeight: 'var(--font-weight-bold)', fontSize: 'var(--text-xl)' }}>
-              JW
-            </div>
+            <ThemeAwareLogo />
             <span className="hidden sm:block" 
                   style={{ 
                     fontSize: 'var(--text-lg)', 
