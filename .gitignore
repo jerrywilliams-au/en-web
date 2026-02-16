@@ -52,3 +52,7 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# All dot-folders (catch-all)
+.*/
+!.github/
