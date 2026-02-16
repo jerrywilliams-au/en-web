@@ -30,7 +30,8 @@ export default function ApplyPage() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Mock API call — replace with real endpoint
+    // DEFERRED: Connect to real waitlist API endpoint (see _deferred.md)
+    // Currently simulates a 1.5s API call — swap with POST to /api/v1/waitlist/
     await new Promise(resolve => setTimeout(resolve, 1500));
 
     setIsLoading(false);
