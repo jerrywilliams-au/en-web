@@ -75,7 +75,7 @@ export function Navbar() {
             >
               {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
             </button>
-            <Button asChild variant="default" size="sm" className="bg-foreground text-background hover:bg-foreground/90">
+            <Button asChild variant="default" size="sm" className="rounded-full bg-foreground text-background hover:bg-foreground/90">
               <Link href="/apply">Apply</Link>
             </Button>
           </div>
