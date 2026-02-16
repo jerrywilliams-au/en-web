@@ -19,7 +19,7 @@ export function CtaSection() {
         <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-background to-transparent" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 text-center">
+      <div className="relative z-10 container max-w-7xl mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
           <motion.h2 
             initial={{ opacity: 0, scale: 0.9 }}

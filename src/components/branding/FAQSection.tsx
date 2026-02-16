@@ -22,7 +22,7 @@ export function FAQSection() {
 
   return (
     <section id="faq" className="py-24 relative overflow-hidden bg-black/5 dark:bg-white/5">
-      <div className="container max-w-4xl mx-auto px-6">
+      <div className="container max-w-7xl mx-auto px-6">
         <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
           Frequently Answered <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-emerald-400">Questions</span>
         </h2>
