@@ -61,19 +61,19 @@ export function MembershipSection() {
               Membership
             </h2>
             <h3 className="text-4xl md:text-5xl font-bold mb-6">
-              Never Build <br />
-              <span className="text-white">Alone Again.</span>
+              Your Inner <br />
+              <span className="text-white">Circle.</span>
             </h3>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Join a high-signal community of builders. Get access to our resource library, office hours, and the shared knowledge of peer founders.
+              This isn&apos;t a course you watch. It&apos;s a curated cohort of builders with skin in the game. We select for ambition, commitment, and a real idea worth shipping.
             </p>
 
             <ul className="space-y-4 mb-8">
               {[
-                'Weekly Office Hours with Jerry',
-                'Access to Private Discord',
-                'Library of Notion & Figma Templates',
-                'Code Snippets & Starter Repos'
+                'Application Review — Share your idea & background',
+                'Live 1:1 Interview — We meet face to face',
+                'Cohort Placement — Join your builder tribe',
+                'Lifetime Platform Access — Your command center, forever'
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-lg text-foreground/80">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400 text-xs">✓</span>
@@ -83,7 +83,7 @@ export function MembershipSection() {
             </ul>
 
             <button className="px-8 py-4 rounded-full bg-emerald-500 hover:bg-emerald-400 text-black font-bold transition-all transform hover:scale-105 shadow-lg shadow-emerald-500/20">
-              Join the Community
+              Begin Your Application
             </button>
           </motion.div>
 

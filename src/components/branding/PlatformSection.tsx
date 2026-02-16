@@ -33,7 +33,7 @@ export function PlatformSection() {
             transition={{ delay: 0.1 }}
             className="text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Your command center for shipping. Single-user tenancy now, enterprise-scale ready when you need it.
+            Your AI-powered command center. Track your journey, join live sessions, and ship real products — all in one place.
           </motion.p>
         </div>
 
@@ -42,7 +42,7 @@ export function PlatformSection() {
           className="relative aspect-video w-full max-w-5xl mx-auto rounded-[2rem] overflow-hidden fix-safari-rounding glass-2 border border-white/10 shadow-2xl shadow-cyan-500/10 group"
         >
            <Image
-             src="/images/branding/platform_section.png"
+             src="/images/branding/platform_dashboard_premium.png"
              alt="Platform Dashboard"
              fill
              className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -63,9 +63,9 @@ export function PlatformSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
           {[
-            { title: 'Single-User Tenant', desc: 'Complete isolation. Your data, your infrastructure, your rules.' },
-            { title: 'Admin Configurable', desc: 'Full control over entitlements, feature flags, and billing settings.' },
-            { title: 'Enterprise Ready', desc: 'Built on the same architecture used by Fortune 500 companies.' }
+            { title: 'Hands-On Build Sessions', desc: 'Live 1:1 and group sessions. Build your real product alongside an experienced architect.' },
+            { title: 'AI-Powered Assistance', desc: 'Your personal AI co-pilot integrated into every stage of the iterative spiral loop.' },
+            { title: 'Selective Admission', desc: 'We review every applicant. Share your idea, your background — and meet us face to face.' }
           ].map((feature, i) => (
             <motion.div
               key={i}
