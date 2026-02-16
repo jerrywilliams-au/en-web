@@ -11,7 +11,7 @@ export function PillarsSection() {
       desc: 'Bridging the gap between reality and possibility. AI-driven ideation & strategic roadmapping.',
       image: '/images/branding/pillar_ideator.png',
       color: 'text-cyan-400',
-      border: 'hover:border-cyan-400/60',
+      border: 'hover:border-white/40',
       glowColor: '0 188 212',
       bar: 'bg-cyan-500'
     },
@@ -21,7 +21,7 @@ export function PillarsSection() {
       desc: 'Sustainable business models. ROI, scalability, and market fit. Turning tech into value.',
       image: '/images/branding/pillar_entrepreneur.png',
       color: 'text-emerald-400',
-      border: 'hover:border-emerald-400/60',
+      border: 'hover:border-white/40',
       glowColor: '52 211 153',
       bar: 'bg-emerald-500'
     },
@@ -31,7 +31,7 @@ export function PillarsSection() {
       desc: 'Technical excellence. Distributed systems, cloud infra, and optimizing inference pipelines.',
       image: '/images/branding/pillar_architect.png',
       color: 'text-indigo-400',
-      border: 'hover:border-indigo-400/60',
+      border: 'hover:border-white/40',
       glowColor: '129 140 248',
       bar: 'bg-indigo-500'
     }

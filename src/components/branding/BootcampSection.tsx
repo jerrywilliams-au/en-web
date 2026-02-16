@@ -58,20 +58,20 @@ export function BootcampSection() {
             </div>
           </motion.div>
 
-          <div className="relative">
-            {/* Spiral hero image as floating backdrop */}
-            <div className="absolute -top-20 -left-20 w-[500px] h-[500px] opacity-20 animate-float pointer-events-none -z-10">
+          <div className="relative overflow-hidden">
+            {/* Spiral hero image as breathing backdrop spanning all blocks */}
+            <div className="absolute inset-0 opacity-20 animate-float pointer-events-none">
               <Image 
                 src="/images/branding/spiral_loop_hero.png" 
                 alt="" 
                 fill 
-                className="object-contain"
+                className="object-cover"
               />
             </div>
             {/* Ambient glow behind curriculum */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-cyan-500/10 rounded-full animate-pulse-glow pointer-events-none -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-white/5 rounded-full animate-pulse-glow pointer-events-none" />
             
-            <div className="space-y-4">
+            <div className="relative z-10 space-y-4">
               {curriculum.map((item, index) => (
                 <motion.div
                   key={index}
@@ -79,13 +79,13 @@ export function BootcampSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   viewport={{ once: true }}
-                  className="group flex items-center gap-6 p-4 rounded-xl glass-1 hover:glass-2 border border-white/5 hover:border-cyan-500/30 transition-all duration-300"
+                  className="group flex items-center gap-6 p-4 rounded-xl bg-white/[0.03] hover:bg-white/[0.07] border border-white/10 hover:border-white/25 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center shrink-0 border border-cyan-500/20 group-hover:border-cyan-500 group-hover:bg-cyan-500/20 group-hover:shadow-[0_0_15px_rgba(6,182,212,0.3)] transition-all font-mono text-cyan-500 font-bold">
+                  <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/20 group-hover:border-white/40 group-hover:bg-white/10 transition-all font-mono text-cyan-500 font-bold">
                     0{index + 1}
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg text-foreground group-hover:text-cyan-400 transition-colors">{item.title}</h4>
+                    <h4 className="font-bold text-lg text-foreground group-hover:text-white transition-colors">{item.title}</h4>
                     <p className="text-sm text-muted-foreground">{item.desc}</p>
                   </div>
                 </motion.div>

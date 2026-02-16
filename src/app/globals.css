@@ -291,15 +291,14 @@
     @apply bg-white/20 backdrop-blur-2xl border border-white/30 dark:bg-black/60 dark:border-white/10;
   }
 
-  /* Pillar card glow — uses --glow CSS variable (R G B) set per card */
+  /* Pillar card glow — neutral grey, no color flicker */
   .pillar-card {
-    box-shadow: 0 0 20px rgb(var(--glow) / 0.15),
-                0 0 40px rgb(var(--glow) / 0.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05),
+                0 0 30px rgba(255, 255, 255, 0.02);
   }
   .pillar-card:hover {
-    box-shadow: 0 0 25px rgb(var(--glow) / 0.4),
-                0 0 50px rgb(var(--glow) / 0.2),
-                0 0 80px rgb(var(--glow) / 0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.12),
+                0 0 40px rgba(255, 255, 255, 0.06);
   }
 }
 

@@ -24,10 +24,10 @@ export function LoopSection() {
   }, [scrollYProgress]);
 
   const steps = [
-    { id: 'compass', title: 'Compass', desc: 'Define Success. Set your North Star.', icon: '/images/branding/icon_compass_premium.png', color: 'text-cyan-400', bg: 'bg-cyan-500', glow: '6 182 212', ring: 'border-cyan-500/50' },
-    { id: 'build', title: 'Build', desc: 'Spiral Iteration. Essential features only.', icon: '/images/branding/icon_build_premium.png', color: 'text-emerald-400', bg: 'bg-emerald-500', glow: '16 185 129', ring: 'border-emerald-500/50' },
-    { id: 'teach', title: 'Teach', desc: 'Teach-Back. Explanation proves mastery.', icon: '/images/branding/icon_teach_premium.png', color: 'text-purple-400', bg: 'bg-purple-500', glow: '139 92 246', ring: 'border-purple-500/50' },
-    { id: 'refine', title: 'Refine', desc: 'Feedback Loop. Ruthless iteration.', icon: '/images/branding/icon_refine_premium.png', color: 'text-amber-400', bg: 'bg-amber-500', glow: '245 158 11', ring: 'border-amber-500/50' },
+    { id: 'compass', title: 'Compass', desc: 'Define Success. Set your North Star.', icon: '/images/branding/icon_compass_premium.png', color: 'text-cyan-400', bg: 'bg-cyan-500', glow: '6 182 212', ring: 'border-white/20' },
+    { id: 'build', title: 'Build', desc: 'Spiral Iteration. Essential features only.', icon: '/images/branding/icon_build_premium.png', color: 'text-emerald-400', bg: 'bg-emerald-500', glow: '16 185 129', ring: 'border-white/20' },
+    { id: 'teach', title: 'Teach', desc: 'Teach-Back. Explanation proves mastery.', icon: '/images/branding/icon_teach_premium.png', color: 'text-purple-400', bg: 'bg-purple-500', glow: '139 92 246', ring: 'border-white/20' },
+    { id: 'refine', title: 'Refine', desc: 'Feedback Loop. Ruthless iteration.', icon: '/images/branding/icon_refine_premium.png', color: 'text-amber-400', bg: 'bg-amber-500', glow: '245 158 11', ring: 'border-white/20' },
   ];
 
   const activeGlow = steps[activeStep].glow;
