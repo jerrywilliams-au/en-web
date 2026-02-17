@@ -36,8 +36,8 @@ export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
       {/* Dark Theme Background — Full Bleed Wide */}
       <div className="absolute inset-0 hidden dark:block">
         <motion.div
-           initial={{ scale: 1 }}
-           animate={{ scale: 1.05 }}
+           initial={{ scale: 1.3 }}
+           animate={{ scale: 1.35 }}
            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
            className="w-full h-full"
         >
