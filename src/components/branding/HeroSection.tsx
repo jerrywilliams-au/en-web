@@ -60,8 +60,11 @@ export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
          >
+           <span className="block text-lg md:text-xl font-medium tracking-[0.2em] text-cyan-600 dark:text-cyan-400 mb-4 uppercase">
+             Ideator &middot; Entrepreneur &middot; Architect
+           </span>
            <h1 className="text-4xl md:text-7xl font-bold mb-6 tracking-tight text-gray-900 dark:text-white">
-             Turn your idea into a <span className="text-cyan-500 dark:text-cyan-400">real product</span>
+             Turn your idea into a <span className="text-cyan-600 dark:text-cyan-400">real product</span>
            </h1>
            <p className="text-xl md:text-2xl text-gray-600 dark:text-white/80 mb-8 max-w-2xl mx-auto">
              The Neuro-Symbiotic Operating System for Solo Founders.
