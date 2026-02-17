@@ -18,7 +18,7 @@ export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
            initial={{ scale: 1 }}
            animate={{ scale: 1.05 }}
            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-           className="w-full h-full"
+           className="relative w-full h-full"
         >
           <Image
             src="/images/branding/hero/hero_light_wide_v2.png"
@@ -36,10 +36,10 @@ export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
       {/* Dark Theme Background — Full Bleed Wide */}
       <div className="absolute inset-0 hidden dark:block">
         <motion.div
-           initial={{ scale: 1.3 }}
-           animate={{ scale: 1.35 }}
+           initial={{ scale: 1.5 }}
+           animate={{ scale: 1.55 }}
            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-           className="w-full h-full"
+           className="relative w-full h-full"
         >
           <Image
             src="/images/branding/hero/hero_dark_wide_v2.png"
