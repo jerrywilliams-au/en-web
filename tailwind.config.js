@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['var(--font-poppins)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-poppins)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       colors: {
         border: "var(--border)",

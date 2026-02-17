@@ -16,8 +16,8 @@
       "Poppins", "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
       "Helvetica Neue", Arial, sans-serif;
     --font-mono:
-      ui-monospace, "SF Mono", "Cascadia Code", "Source Code Pro", Menlo,
-      Consolas, monospace;
+      "Poppins", "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
 
     /* Font Weights */
     --font-weight-light: 300;
