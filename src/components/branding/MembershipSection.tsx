@@ -39,10 +39,7 @@ export function MembershipSection() {
                      </div>
                    </div>
 
-                   {/* Label */}
-                   <div className="absolute bottom-4 inset-x-0 text-center">
-                     <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-cyan-400/70">Antigravity</span>
-                   </div>
+
 
                    {/* Particle dots */}
                    <div className="absolute top-[20%] left-[25%] w-1 h-1 bg-cyan-400/60 rounded-full animate-pulse" />
@@ -107,10 +104,7 @@ export function MembershipSection() {
                      </div>
                    </div>
 
-                   {/* Label */}
-                   <div className="absolute bottom-4 inset-x-0 text-center">
-                     <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-purple-400/70">Nano Banana</span>
-                   </div>
+
 
                    {/* Ambient particles */}
                    <div className="absolute top-[25%] right-[22%] w-1 h-1 bg-purple-400/50 rounded-full animate-pulse" style={{ animationDelay: '0.5s' }} />
