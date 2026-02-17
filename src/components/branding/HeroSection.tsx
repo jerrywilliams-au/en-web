@@ -11,47 +11,47 @@ interface HeroSectionProps {
 
 export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black">
       {/* Light Theme Background */}
-      <div className="absolute inset-0 block dark:hidden">
+      <div className="absolute inset-0 flex items-center justify-center block dark:hidden">
         <motion.div
            initial={{ scale: 1 }}
            animate={{ scale: 1.05 }}
            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-           className="w-full h-full"
+           className="relative w-[60%] aspect-video"
         >
           <Image
             src="/images/branding/hero/hero_light_16x9.png"
             alt="Hero Background Light"
             fill
-            className="object-cover"
+            className="object-contain"
             priority
             quality={100}
           />
         </motion.div>
         {/* Subtle overlay for text readability in light mode */}
-        <div className="absolute inset-0 bg-white/30" />
+        <div className="absolute inset-0 bg-white/20" />
       </div>
 
       {/* Dark Theme Background */}
-      <div className="absolute inset-0 hidden dark:block">
+      <div className="absolute inset-0 flex items-center justify-center hidden dark:flex">
         <motion.div
            initial={{ scale: 1 }}
            animate={{ scale: 1.05 }}
            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-           className="w-full h-full"
+           className="relative w-[60%] aspect-video"
         >
           <Image
             src="/images/branding/hero/hero_dark_16x9.png"
             alt="Hero Background Dark"
             fill
-            className="object-cover opacity-90"
+            className="object-contain opacity-90"
             priority
             quality={100}
           />
         </motion.div>
         {/* Subtle overlay for text readability in dark mode */}
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
       
       <div className="relative z-10 container max-w-7xl mx-auto px-6 text-center">
