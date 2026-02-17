@@ -42,7 +42,7 @@ export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
            className="relative w-full h-full"
         >
           <Image
-            src="/images/branding/hero/hero_dark_calculated_v5.png"
+            src="/images/branding/hero/hero_dark_calculated_v6.png"
             alt="Hero Background Dark"
             fill
             className="object-cover opacity-80 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]"
