@@ -4,23 +4,18 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, PlayCircle } from 'lucide-react';
 import Link from 'next/link';
-import { ParallaxBG } from './ParallaxBG';
+import { HeroBackgroundCarousel } from './HeroBackgroundCarousel';
 
 interface HeroSectionProps {
-  lightSrc?: string;
+  lightSrc?: string; // Kept for compatibility but unused
   darkSrc?: string;
 }
 
 export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <ParallaxBG 
-        src={darkSrc || ''} 
-        lightSrc={lightSrc} 
-        darkSrc={darkSrc} 
-        alt="Hero Background" 
-        priority 
-      />
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden text-white">
+      {/* Cinematic Background Carousel */}
+      <HeroBackgroundCarousel />
       
       <div className="relative z-10 container max-w-7xl mx-auto px-6 text-center">
          <motion.div
@@ -31,7 +26,7 @@ export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
            <h1 className="text-4xl md:text-7xl font-bold mb-6 tracking-tight">
              Turn your idea into a <span className="text-cyan-400">real product</span>
            </h1>
-           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+           <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-2xl mx-auto">
              The Neuro-Symbiotic Operating System for Solo Founders.
            </p>
            
