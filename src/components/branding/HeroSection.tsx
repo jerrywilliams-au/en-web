@@ -12,16 +12,16 @@ interface HeroSectionProps {
 export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-black">
-      {/* Light Theme Background — Full Bleed Wide V3 Scaled */}
+      {/* Light Theme Background — Full Bleed Calculated V4 */}
       <div className="absolute inset-0 block dark:hidden">
         <motion.div
-           initial={{ scale: 2.5 }}
-           animate={{ scale: 2.6 }}
+           initial={{ scale: 1 }}
+           animate={{ scale: 1.05 }}
            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
            className="relative w-full h-full"
         >
           <Image
-            src="/images/branding/hero/hero_light_extreme_wide_v3.png"
+            src="/images/branding/hero/hero_light_calculated_v4.png"
             alt="Hero Background Light"
             fill
             className="object-cover opacity-80 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]"
@@ -33,16 +33,16 @@ export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
         <div className="absolute inset-0 bg-white/20" />
       </div>
 
-      {/* Dark Theme Background — Full Bleed Wide V3 Scaled */}
+      {/* Dark Theme Background — Full Bleed Calculated V4 */}
       <div className="absolute inset-0 hidden dark:block">
         <motion.div
-           initial={{ scale: 2.5 }}
-           animate={{ scale: 2.6 }}
+           initial={{ scale: 1 }}
+           animate={{ scale: 1.05 }}
            transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
            className="relative w-full h-full"
         >
           <Image
-            src="/images/branding/hero/hero_dark_extreme_wide_v3.png"
+            src="/images/branding/hero/hero_dark_calculated_v4.png"
             alt="Hero Background Dark"
             fill
             className="object-cover opacity-80 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]"
