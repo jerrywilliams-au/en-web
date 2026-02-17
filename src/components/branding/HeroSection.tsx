@@ -24,7 +24,7 @@ export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
             src="/images/branding/hero/hero_light_extreme_wide_v3.png"
             alt="Hero Background Light"
             fill
-            className="object-cover opacity-60"
+            className="object-cover opacity-60 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]"
             priority
             quality={100}
           />
@@ -45,7 +45,7 @@ export function HeroSection({ lightSrc, darkSrc }: HeroSectionProps) {
             src="/images/branding/hero/hero_dark_extreme_wide_v3.png"
             alt="Hero Background Dark"
             fill
-            className="object-cover opacity-60"
+            className="object-cover opacity-60 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]"
             priority
             quality={100}
           />
