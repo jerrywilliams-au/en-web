@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { LogOut, Settings } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import SignOutButton from './SignOutButton';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -22,21 +23,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             >
               View Site ↗
             </Link>
-            <form action="/api/admin/auth" method="DELETE">
-              <button
-                formAction="/api/admin/auth"
-                type="submit"
-                onClick={async (e) => {
-                  e.preventDefault();
-                  await fetch('/api/admin/auth', { method: 'DELETE' });
-                  window.location.href = '/jw-admin/login';
-                }}
-                className="flex items-center gap-1.5 text-xs text-white/40 hover:text-red-400 transition-colors"
-              >
-                <LogOut className="w-3.5 h-3.5" />
-                Sign Out
-              </button>
-            </form>
+            <SignOutButton />
           </div>
         </div>
       </header>
