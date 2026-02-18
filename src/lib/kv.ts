@@ -1,5 +1,3 @@
-import { kv } from '@vercel/kv';
-
 export interface SiteConfig {
   maintenanceMode: boolean;
   announcementText: string;
@@ -12,8 +10,19 @@ const DEFAULT_CONFIG: SiteConfig = {
 
 const CONFIG_KEY = 'site-config';
 
+async function getKV() {
+  try {
+    const { kv } = await import('@vercel/kv');
+    return kv;
+  } catch {
+    return null;
+  }
+}
+
 export async function getSiteConfig(): Promise<SiteConfig> {
   try {
+    const kv = await getKV();
+    if (!kv) return DEFAULT_CONFIG;
     const config = await kv.get<SiteConfig>(CONFIG_KEY);
     return config || DEFAULT_CONFIG;
   } catch (error) {
@@ -24,6 +33,8 @@ export async function getSiteConfig(): Promise<SiteConfig> {
 
 export async function updateSiteConfig(newConfig: Partial<SiteConfig>): Promise<SiteConfig> {
   try {
+    const kv = await getKV();
+    if (!kv) throw new Error('KV not available');
     const current = await getSiteConfig();
     const updated = { ...current, ...newConfig };
     await kv.set(CONFIG_KEY, updated);
