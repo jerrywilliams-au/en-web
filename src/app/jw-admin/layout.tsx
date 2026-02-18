@@ -1,22 +1,48 @@
-export default function AdminLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import Link from 'next/link';
+import { LogOut, Settings } from 'lucide-react';
+
+export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-zinc-950 text-gray-900 dark:text-gray-100 font-sans">
-      <nav className="border-b border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 px-6 py-4 flex items-center justify-between">
-         <div className="flex items-center gap-2">
-           <div className="w-8 h-8 bg-black dark:bg-white rounded-lg flex items-center justify-center">
-             <span className="text-white dark:text-black font-bold text-xs">JW</span>
-           </div>
-           <span className="font-semibold text-sm tracking-wide">Admin Control</span>
-         </div>
-         <a href="/" target="_blank" className="text-xs text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors">
-            View Live Site &rarr;
-         </a>
-      </nav>
-      <main className="container max-w-3xl mx-auto py-10 px-6">
+    <div className="min-h-screen bg-zinc-950 text-white">
+      {/* Top Bar */}
+      <header className="border-b border-white/5 bg-black/40 backdrop-blur-sm sticky top-0 z-50">
+        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="w-6 h-6 rounded-md bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
+              <Settings className="w-3.5 h-3.5 text-black" />
+            </div>
+            <span className="text-sm font-semibold tracking-tight text-white">Admin Console</span>
+            <span className="text-white/20 text-xs font-mono">/ jerrywilliams.au</span>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/"
+              className="text-xs text-white/40 hover:text-white/70 transition-colors"
+              target="_blank"
+            >
+              View Site ↗
+            </Link>
+            <form action="/api/admin/auth" method="DELETE">
+              <button
+                formAction="/api/admin/auth"
+                type="submit"
+                onClick={async (e) => {
+                  e.preventDefault();
+                  await fetch('/api/admin/auth', { method: 'DELETE' });
+                  window.location.href = '/jw-admin/login';
+                }}
+                className="flex items-center gap-1.5 text-xs text-white/40 hover:text-red-400 transition-colors"
+              >
+                <LogOut className="w-3.5 h-3.5" />
+                Sign Out
+              </button>
+            </form>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content */}
+      <main className="max-w-5xl mx-auto px-6 py-10">
         {children}
       </main>
     </div>
